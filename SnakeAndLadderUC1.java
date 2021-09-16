@@ -5,18 +5,18 @@ public class SnakeAndLadderUC1 {
 
     private static int snake(int die) {
         System.out.println("Player1 is Bitten By Snake");
-        if(playerPosition - die < 1){
+        if (playerPosition - die < 1) {
             return 0;
-        }else{
+        } else {
             return playerPosition - die;
         }
     }
 
     private static int ladder(int die) {
         System.out.println("Player1 moved Ahead Through Ladder");
-        if(playerPosition + die > 100){
+        if (playerPosition + die > 100) {
             return playerPosition;
-        }else{
+        } else {
             return playerPosition + die;
         }
     }
@@ -37,7 +37,7 @@ public class SnakeAndLadderUC1 {
                 System.out.println("Player1 Is Now At Position: " + playerPosition);
 
             } else {
-                playerPosition =  snake(die);
+                playerPosition = snake(die);
                 System.out.println("Player1 Is Now At Position: " + playerPosition);
 
             }
