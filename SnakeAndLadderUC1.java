@@ -12,6 +12,15 @@ public class SnakeAndLadderUC1 {
         }
     }
 
+    private static int ladder(int die) {
+        System.out.println("Player1 moved Ahead Through Ladder");
+        if(playerPosition + die > 100){
+            return playerPosition;
+        }else{
+            return playerPosition + die;
+        }
+    }
+
     public static void main(String[] args) {
         int die = 0;
         int random = 0;
@@ -24,6 +33,7 @@ public class SnakeAndLadderUC1 {
                 System.out.println("Player1 Is Now At Position: " + playerPosition);
 
             } else if (random == 2) {
+                playerPosition = ladder(die);
                 System.out.println("Player1 Is Now At Position: " + playerPosition);
 
             } else {
